@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProboChecker.DataAccess", "ProboChecker.DataAccess\ProboChecker.DataAccess.csproj", "{C7B6B5D2-ACF7-4119-ABA1-837B18387D4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProboChecker.Services", "ProboChecker.Services\ProboChecker.Services.csproj", "{076D1AAB-965A-40E0-8687-EA708A16686D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{C7B6B5D2-ACF7-4119-ABA1-837B18387D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7B6B5D2-ACF7-4119-ABA1-837B18387D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7B6B5D2-ACF7-4119-ABA1-837B18387D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{076D1AAB-965A-40E0-8687-EA708A16686D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{076D1AAB-965A-40E0-8687-EA708A16686D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{076D1AAB-965A-40E0-8687-EA708A16686D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{076D1AAB-965A-40E0-8687-EA708A16686D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
