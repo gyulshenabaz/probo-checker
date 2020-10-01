@@ -53,6 +53,7 @@ namespace ProboChecker.Web
             });
             
             app.UseRouting();
+            
         }
     }
 }
