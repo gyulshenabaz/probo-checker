@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\ProboChecker.DataAccess\ProboChecker.DataAccess.csproj" />
+      <ProjectReference Include="..\ProboChecker.Services\ProboChecker.Services.csproj" />
     </ItemGroup>
 
 </Project>
