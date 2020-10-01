@@ -5,6 +5,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProboChecker.DataAccess.Context;
+using ProboChecker.DataAccess.Repository;
+using ProboChecker.DataAccess.Repository.Interfaces;
+using ProboChecker.Services.Helpers;
+using ProboChecker.Services.Implementations;
+using ProboChecker.Services.Interfaces;
 
 namespace ProboChecker.Web
 {
@@ -21,6 +26,11 @@ namespace ProboChecker.Web
         {
             services.AddDbContext<ProboCheckerDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
+            services.AddScoped<IApiKeysService, ApiKeysService>();
+            services.AddScoped<IRandomKeyGenerator, RandomKeyGenerator>();
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -30,6 +40,18 @@ namespace ProboChecker.Web
                 app.UseDeveloperExceptionPage();
             }
 
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseCors(builder =>
+            {
+                builder.AllowAnyOrigin();
+                builder.AllowAnyHeader();
+                builder.AllowAnyMethod();
+            });
+            
             app.UseRouting();
         }
     }

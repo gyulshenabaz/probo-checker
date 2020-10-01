@@ -23,6 +23,7 @@ namespace ProboChecker.Web.Filters
                     StatusCode = StatusCodes.Status401Unauthorized,
                     Content = "API key is required"
                 };
+                
                 return;
             }
 
@@ -39,6 +40,5 @@ namespace ProboChecker.Web.Filters
 
             base.OnActionExecuting(context);
         }
-
     }
 }
