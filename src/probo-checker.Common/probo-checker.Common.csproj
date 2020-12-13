@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>probo_checker.Common</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AutoMapper\0ykegetw.os4~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+    <PackageReference Include="Shell.NET" Version="0.2.2" />
+  </ItemGroup>
+
+</Project>
